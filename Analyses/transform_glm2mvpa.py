@@ -1,24 +1,33 @@
-"""
-Transforms glm estimates to mvpa objects
-"""
-
-import os
-import shutil
-import sys
-import numpy as np
 import glob
-from os.path import join as opj
-sys.path.append('/home/lukas/Dropbox/PhD_projects/scikit_BOLD/')
-from data2mvpa import Fsl2mvp, DataHandler
+import os
+from scikit_bold.data2mvp.glm2mvp import Fsl2mvp
 
-self_dirs = glob.glob('/home/lukas/DecodingEmotions/Self/*/*.feat')
+mask = '/media/lukas/data/DecodingEmotions/GrayMatter.nii.gz'
+mask_threshold = 0
 
-"""
-for dr in self_dirs:
-    fsl2mvp = Fsl2mvp(dr, mask=None, mask_threshold=0, remove_class=[],
-                 ref_space='epi', beta2tstat=True, cleanup=1)
-    fsl2mvp.transform().merge_runs()
-"""
+opt_dirs_hww = glob.glob('/media/lukas/data/DecodingEmotions/Optimization_set/glm_HWW/*/*.feat')
 
-mvp_dirs = glob.glob('/home/lukas/DecodingEmotions/Self/*/mvp_data')
-test = DataHandler(mvp_dirs[0], identifier='merged', shape='2D').load()
+for d in opt_dirs_hww:
+	converter = Fsl2mvp(d, mask_threshold=mask_threshold, beta2tstat=True, ref_space='epi', mask_path=mask,
+				   remove_class=['Cue'])
+	converter.glm2mvp()
+
+opt_dirs_zinnen = glob.glob('/media/lukas/data/DecodingEmotions/Optimization_set/glm_zinnen/*/*.feat')
+
+
+for d in opt_dirs_zinnen:
+	converter = Fsl2mvp(d, mask_threshold=mask_threshold, beta2tstat=True, ref_space='epi', mask_path=mask,
+				   remove_class=[])
+	converter.glm2mvp().merge_runs()
+
+val_dirs_hww = glob.glob('/media/lukas/data/DecodingEmotions/Validation_set/glm_HWW/*/*.feat')
+for d in val_dirs_hww:
+	converter = Fsl2mvp(d, mask_threshold=mask_threshold, beta2tstat=True, ref_space='epi', mask_path=mask,
+				   remove_class=['Cue'])
+	converter.glm2mvp()
+
+val_dirs_zinnen = glob.glob('/media/lukas/data/DecodingEmotions/Validation_set/glm_zinnen/*/*.feat')
+for d in val_dirs_zinnen:
+	converter = Fsl2mvp(d, mask_threshold=mask_threshold, beta2tstat=True, ref_space='epi', mask_path=mask,
+				   remove_class=[])
+	converter.glm2mvp().merge_runs()
