@@ -1,0 +1,154 @@
+Conjunction,cluster,k cluster,max cluster,x,y,z,Region,k region,max region
+Act > int,1,611,3.75,14,38,34,,,
+,,,,,,,R. Medial temporal gyrus temporo-occipital,319,3.75
+,,,,,,,R. Lateral occipital cortex superior,166,3.30
+,,,,,,,R. Angular gyrus,101,3.53
+,2,543,3.79,73,29,44,,,
+,,,,,,,L. Lateral occipital cortex inferior,200,3.49
+,,,,,,,L. Medial temporal gyrus temporo-occipital,135,3.65
+,,,,,,,L. Lateral occitipal cortex superior,100,3.79
+,,,,,,,L. Angular gyrus,80,3.43
+,,,,,,,,,
+Int > act,,,,,,,No significant clusters.,,
+,,,,,,,,,
+,,,,,,,,,
+Act > sit,1,3180,5.27,73,44,59,,,
+,,,,,,,L. Supramarginal gyrust anterior,1038,5.27
+,,,,,,,L. Postcentral gyrus,532,4.96
+,,,,,,,L. Supramarginal gyrus posterior,295,4.65
+,,,,,,,L. Superior parietallobule,258,4.04
+,,,,,,,L. Parietal operculum,160,4.87
+,,,,,,,L. Planum temporale,29,3.53
+,2,3138,5.38,14,49,55,,,
+,,,,,,,R. Supramarginal gyrus anterior,826,5.38
+,,,,,,,R. Supramarginal gyrus posterior,615,4.84
+,,,,,,,R. Postcentral gyrus,319,4.22
+,,,,,,,R. Superior parietal lobule,240,4.56
+,,,,,,,R. Parietal operculum,105,4.30
+,,,,,,,R. Angular gyrus,27,3.32
+,3,913,4.87,71,33,36,,,
+,,,,,,,L. Lateral occipital cortex inferior,397,4.65
+,,,,,,,L. Medial temporal gyrus temporo-occipital,279,4.87
+,,,,,,,L. Inferior temporal gyrus temporo-occipital,23,3.48
+,4,712,4.70,65,84,43,,,
+,,,,,,,L. Frontal pole,540,4.70
+,,,,,,,L. Medial frontal gyrus,114,3.60
+,,,,,,,L. Inferior frontal gyrus parstriangularis,39,3.80
+,5,706,4.45,21,83,39,,,
+,,,,,,,R. Frontal pole,599,4.45
+,,,,,,,R. Medial frontal gyrus,38,3.25
+,,,,,,,R. Inferior frontal gyrus parstriangularis,22,3.34
+,,,,,,,,,
+Sit > act,1,7497,4.80,48,35,41,,,
+,,,,,,,L. Lingual gyrus,1186,4.32
+,,,,,,,L. Precuneous,1061,4.80
+,,,,,,,R. Lingual gyrus,909,4.02
+,,,,,,,R. Precuneous,762,4.77
+,,,,,,,R. Intracalcarine cortex,591,4.20
+,,,,,,,L. Posterior cingulate cortex,539,4.62
+,,,,,,,L. Intracalcarine cortex,523,4.64
+,,,,,,,R. Posterior cingulate cortex,400,4.77
+,,,,,,,L. Occipital fusiform,352,3.88
+,,,,,,,L. Parahippocampal gyrus posterior,205,4.47
+,,,,,,,R. Occipital fusiform,172,3.60
+,,,,,,,R. Parahippocampal gyrus posterior,159,3.83
+,,,,,,,R. Temporo-occipital fusiform,156,3.31
+,,,,,,,L. Temporo-occipital fusiform,121,3.56
+,,,,,,,L. Occipital pole,99,3.79
+,,,,,,,L. Temporal fusiform posterior,78,4.43
+,,,,,,,R. Temporal fusiform posterior,65,3.83
+,,,,,,,L. Supracalcarine cortex,43,3.51
+,,,,,,,L. Cuneal cortex,27,3.39
+,,,,,,,R. Occipital pole,23,3.15
+,,,,,,,R. Cuneal cortex,22,3.24
+,2,3744,5.59,71,61,27,,,
+,,,,,,,L. Temporal pole,961,5.42
+,,,,,,,L. Superior temporal gyrus posterior,609,5.32
+,,,,,,,L. Medial temporal gyrus posterior,543,5.28
+,,,,,,,L. Medial temporal gyrus anterior,430,5.59
+,,,,,,,L. Orbitofrontal cortex,208,4.07
+,,,,,,,L. Superior temporal gyrus anterior,183,5.48
+,,,,,,,L. Inferior frontal gyrus parstriangularis,149,3.66
+,,,,,,,L. Inferior frontal gyrus parsopercularis,69,3.63
+,,,,,,,L. Inferior temporal gyrus anterior,45,3.57
+,,,,,,,L. Medial temporal gyrus temporo-occipital,45,3.63
+,,,,,,,L. Frontal operculum,42,3.60
+,3,3308,4.83,49,89,58,,,
+,,,,,,,L. Frontal pole,1119,4.83
+,,,,,,,R. Frontal pole,738,4.45
+,,,,,,,L. Superior frontal gyrus,307,4.15
+,,,,,,,L. Paracingulate gyrus,121,3.69
+,,,,,,,L. Frontal medial cortex,109,4.68
+,,,,,,,R. Superior frontal gyrus,81,3.59
+,,,,,,,R. Frontal medial cortex,47,4.16
+,,,,,,,R. Paracingulate gyrus,31,3.28
+,4,2040,4.89,21,69,23,,,
+,,,,,,,R. Temporal pole,693,4.89
+,,,,,,,R. Superior temporal gyrus posterior,378,4.61
+,,,,,,,R. Medial temporal gyrus posterior,360,4.77
+,,,,,,,R. Medial temporal gyrus anterior,320,4.86
+,,,,,,,R. Superior temporal gyrus anterior,179,4.43
+,5,1249,4.84,70,29,50,,,
+,,,,,,,L. Lateral occitipal cortex superior,699,4.84
+,,,,,,,L. Angular gyrus,324,4.26
+,6,33,3.18,29,75,27,,,
+,,,,,,,R. Orbitofrontal cortex,31,3.18
+,,,,,,,,,
+Int > sit,1,1860,5.00,76,46,57,,,
+,,,,,,,L. Supramarginal gyrust anterior,860,5.00
+,,,,,,,L. Postcentral gyrus,201,4.48
+,,,,,,,L. Supramarginal gyrus posterior,195,4.36
+,,,,,,,L. Parietal operculum,100,4.48
+,,,,,,,L. Superior parietallobule,72,3.47
+,2,921,5.19,65,83,41,,,
+,,,,,,,L. Frontal pole,672,5.19
+,,,,,,,L. Medial frontal gyrus,84,4.04
+,,,,,,,L. Inferior frontal gyrus parstriangularis,49,4.35
+,,,,,,,,,
+Sit > int,1,8035,4.74,57,40,30,,,
+,,,,,,,L. Lingual gyrus,998,4.74
+,,,,,,,R. Lingual gyrus,917,4.07
+,,,,,,,L. Precuneous,914,4.23
+,,,,,,,R. Precuneous,740,4.44
+,,,,,,,R. Intracalcarine cortex,635,4.44
+,,,,,,,L. Intracalcarine cortex,586,4.24
+,,,,,,,R. Lateral occipital cortex superior,573,4.37
+,,,,,,,L. Posterior cingulate cortex,429,4.05
+,,,,,,,L. Temporo-occipital fusiform,381,4.74
+,,,,,,,R. Posterior cingulate cortex,310,3.92
+,,,,,,,L. Occipital fusiform,258,4.06
+,,,,,,,R. Temporo-occipital fusiform,250,4.27
+,,,,,,,L. Parahippocampal gyrus posterior,187,4.60
+,,,,,,,R. Parahippocampal gyrus posterior,171,3.80
+,,,,,,,L. Temporal fusiform posterior,164,4.29
+,,,,,,,R. Temporal fusiform posterior,120,3.76
+,,,,,,,R. Occipital fusiform,86,3.36
+,,,,,,,L. Occipital pole,61,3.39
+,,,,,,,R. Lateral occipital cortex inferior,52,3.51
+,,,,,,,R. Occipital pole,49,3.26
+,,,,,,,L. Lateral occipital cortex inferior,42,3.41
+,,,,,,,L. Supracalcarine cortex,32,3.26
+,,,,,,,R. Cuneal cortex,26,3.26
+,2,4872,5.58,71,60,28,,,
+,,,,,,,L. Lateral occitipal cortex superior,1063,4.55
+,,,,,,,L. Temporal pole,879,5.02
+,,,,,,,L. Superior temporal gyrus posterior,615,4.83
+,,,,,,,L. Medial temporal gyrus posterior,470,4.96
+,,,,,,,L. Angular gyrus,465,4.86
+,,,,,,,L. Medial temporal gyrus anterior,412,5.58
+,,,,,,,L. Superior temporal gyrus anterior,159,5.58
+,,,,,,,L. Occipital pole,102,3.60
+,,,,,,,L. Inferior temporal gyrus anterior,54,3.68
+,,,,,,,L. Medial temporal gyrus temporo-occipital,45,3.43
+,,,,,,,L. Supramarginal gyrus posterior,33,3.71
+,,,,,,,L. Orbitofrontal cortex,30,3.05
+,3,1815,5.10,20,57,28,,,
+,,,,,,,R. Temporal pole,719,4.74
+,,,,,,,R. Medial temporal gyrus posterior,306,5.10
+,,,,,,,R. Superior temporal gyrus posterior,289,4.80
+,,,,,,,R. Medial temporal gyrus anterior,261,4.71
+,,,,,,,R. Superior temporal gyrus anterior,168,4.90
+,4,1127,4.28,50,89,58,,,
+,,,,,,,L. Frontal pole,449,4.28
+,,,,,,,R. Frontal pole,178,3.44
+,,,,,,,L. Superior frontal gyrus,142,3.68

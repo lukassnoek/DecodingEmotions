@@ -24,7 +24,7 @@ warnings.filterwarnings('ignore', category=DeprecationWarning)
 """ START OF ANALYSIS """
 
 #  Definition of data-dirs
-project_dir = '/media/lukas/data/DecodingEmotions/Validation_set'
+project_dir = '/media/lukas/data/DecodingEmotions/Optimization_process/Smoothing_testtrials/0mm'
 self_dir = op.join(project_dir, 'glm_zinnen')
 other_dir = op.join(project_dir, 'glm_HWW')
 self_paths = glob.glob(op.join(self_dir, 'sub*'))
