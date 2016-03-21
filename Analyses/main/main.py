@@ -13,9 +13,8 @@ from sklearn.svm import SVC
 # from sklearn.grid_search import GridSearchCV
 from sklearn.pipeline import Pipeline
 from joblib import Parallel, delayed
-from skbold.utils.mvp_utils import (MvpResults, MvpAverageResults,
-                                         DataHandler)
-from skbold.transformers.transformers import *
+from skbold.utils import (MvpResults, MvpAverageResults, DataHandler)
+from skbold.transformers import *
 
 # Turn-off UserWarning to avoid clutter
 warnings.filterwarnings('ignore', category=UserWarning)
@@ -31,11 +30,12 @@ self_paths = glob.glob(op.join(self_dir, 'sub*'))
 other_paths = glob.glob(op.join(other_dir, 'sub*'))
 
 # Analysis parameters
-iterations = 10
+iterations = 100000
 n_test = 4
 zvalue = 2.3
 score_method = 'voting'
-resultsdir = 'redo_voxelplots'
+resultsdir = 'redo_main'
+n_cores = -1
 
 # Processing-pipeline
 scaler = StandardScaler()
@@ -50,7 +50,7 @@ pipeline = Pipeline([('transformer', transformer),
 # pipeline = GridSearchCV(pipeline, param_grid=gs_params, n_jobs=-1)
 
 def run_classification(self_path, other_path, n_test, iterations,
-                       score_method, pipeline, cutoff):
+                       score_method, pipeline, cutoff, resultsdir):
 
     self_dir = os.path.dirname(self_path)
     other_dir = os.path.dirname(other_path)
@@ -69,13 +69,13 @@ def run_classification(self_path, other_path, n_test, iterations,
                                          test_size=n_test * self_data.n_class)
 
     # Results-object initialization
-    results_self = MvpResults(self_data, iterations, 'redo_voxelplots', method=score_method, feature_scoring='accuracy')
-    results_other = MvpResults(other_data, iterations, 'redo_voxelplots', method=score_method, feature_scoring='accuracy')
+    results_self = MvpResults(self_data, iterations, resultsdir, method=score_method, feature_scoring='coefovo')
+    results_other = MvpResults(other_data, iterations, resultsdir, method=score_method, feature_scoring='coefovo')
 
     # Loop over folds
     for j, folds in enumerate(zip(folds_self, folds_other)):
 
-        if (j+1) % (iterations / 5) == 0:
+        if (j+1) % (iterations / 100) == 0:
             print('Iteration: %i' % (j+1))
 
         f_self, f_other = folds
@@ -99,8 +99,8 @@ def run_classification(self_path, other_path, n_test, iterations,
     results_self.compute_score().write_results(self_dir, convert2mni=True)
     results_other.compute_score().write_results(other_dir, convert2mni=True)
 
-Parallel(n_jobs=1)(delayed(run_classification)(self_path, other_path, n_test, iterations, score_method, pipeline,
-                                               zvalue) for self_path, other_path in zip(self_paths, other_paths))
+Parallel(n_jobs=n_cores)(delayed(run_classification)(self_path, other_path, n_test, iterations, score_method, pipeline,
+                                               zvalue, resultsdir) for self_path, other_path in zip(self_paths, other_paths))
 
 # Initialize 'averager' and write results
 averager_s = MvpAverageResults(self_dir, resultsdir, cleanup=False)
