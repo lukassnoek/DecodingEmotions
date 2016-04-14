@@ -5,7 +5,6 @@ Main analysis script for the Decoding Emotions study.
 from __future__ import print_function, division, absolute_import
 import glob
 import os
-import sys
 import warnings
 import os.path as op
 from sklearn.preprocessing import StandardScaler
@@ -13,8 +12,10 @@ from sklearn.cross_validation import StratifiedShuffleSplit
 from sklearn.svm import SVC
 # from sklearn.grid_search import GridSearchCV
 from sklearn.pipeline import Pipeline
-from scikit_bold.utils.mvp_utils import (MvpResults, DataHandler)
-from scikit_bold.transformers.transformers import *
+from joblib import Parallel, delayed
+from skbold.utils.mvp_utils import (MvpResults, MvpAverageResults,
+                                         DataHandler)
+from skbold.transformers.transformers import *
 
 # Turn-off UserWarning to avoid clutter
 warnings.filterwarnings('ignore', category=UserWarning)
@@ -23,40 +24,21 @@ warnings.filterwarnings('ignore', category=DeprecationWarning)
 """ START OF ANALYSIS """
 
 #  Definition of data-dirs
-project_dir = '/media/lukas/data/DecodingEmotions/Validation_set'
-self_dir = op.join(project_dir, 'glm_zinnen')
-other_dir = op.join(project_dir, 'glm_HWW')
-self_paths = glob.glob(op.join(self_dir, 'sub*'))
-other_paths = glob.glob(op.join(other_dir, 'sub*'))
-
-# Analysis parameters
-iterations = 1000
-n_test = 4
-zvalue = 2.3
-score_method = 'voting'
-
-# Processing-pipeline
-scaler = StandardScaler()
-transformer = MeanEuclidean(cutoff=zvalue, normalize=True)
-permuter = ArrayPermuter()
-clf = SVC(kernel='linear', probability=True)
-pipeline = Pipeline([('transformer', transformer),
-                     ('scaler', scaler),
-                     ('permuter', permuter),
-                     ('classifier', clf)])
-
-# Grid-search parameters
-# gs_params = dict(euclidean__zvalue=np.linspace(1.5, 2.3, 9))
-# pipeline = GridSearchCV(pipeline, param_grid=gs_params, n_jobs=-1)
-
-perm_nr = sys.argv[1]
-print('Permutation: %s' % perm_nr)
-
 def run_classification(self_path, other_path, n_test, iterations,
-                       score_method, pipeline, cutoff, perm_nr):
+                       score_method, cutoff):
+
+    scaler = StandardScaler()
+    transformer = MeanEuclidean(cutoff=cutoff, normalize=True)
+    clf = SVC(kernel='linear', probability=True)
+    pipeline = Pipeline([('transformer', transformer),
+                     ('scaler', scaler),
+                     ('classifier', clf)])
 
     self_dir = os.path.dirname(self_path)
     other_dir = os.path.dirname(other_path)
+
+    sub_name = os.path.basename(self_path)
+    print('\nProcessing %s' % sub_name)
 
     # Loading
     self_data = DataHandler(identifier='merged', shape='2D').load_separate_sub(self_path)
@@ -69,11 +51,15 @@ def run_classification(self_path, other_path, n_test, iterations,
                                          test_size=n_test * self_data.n_class)
 
     # Results-object initialization
-    results_self = MvpResults(self_data, iterations, method=score_method, feature_scoring='accuracy')
-    results_other = MvpResults(other_data, iterations, method=score_method, feature_scoring='accuracy')
+    resultsdir = 'results_%f' % cutoff
+    results_self = MvpResults(self_data, iterations, resultsdir=resultsdir, method=score_method, feature_scoring='accuracy')
+    results_other = MvpResults(other_data, iterations, resultsdir=resultsdir, method=score_method, feature_scoring='accuracy')
 
     # Loop over folds
     for j, folds in enumerate(zip(folds_self, folds_other)):
+
+        if (j+1) % (iterations / 5) == 0:
+            print('Iteration: %i' % (j+1))
 
         f_self, f_other = folds
         s_train_idx, s_test_idx = f_self
@@ -93,8 +79,37 @@ def run_classification(self_path, other_path, n_test, iterations,
         results_other.update_results(test_idx=o_test_idx, y_pred=y_pred_o, pipeline=pipeline)
 
     # Compute average performance and write results (.csv)
-    results_self.compute_score().write_results_permutation(self_dir, perm_nr)
-    results_other.compute_score().write_results_permutation(other_dir, perm_nr)
+    results_self.compute_score().write_results(self_dir, convert2mni=True)
+    results_other.compute_score().write_results(other_dir, convert2mni=True)
 
-Parallel(n_jobs=10)(delayed(run_classification)(self_path, other_path, n_test, iterations, score_method, pipeline,
-                                               zvalue, perm_nr) for self_path, other_path in zip(self_paths, other_paths))
+    return resultsdir
+#####
+
+# Analysis parameters
+iterations = 5000
+n_test = 4
+zvalue = np.array([1.5, 1.75, 2., 2.25, 2.5, 2.75])
+smooth = ['0mm', '2mm', '5mm', '10mm']
+score_method = 'voting'
+
+
+for sm in smooth:
+
+    project_dir = '/media/lukas/data/DecodingEmotions/Optimization_process/Smoothing_testtrials/%s' % sm
+    self_dir = op.join(project_dir, 'glm_zinnen')
+    other_dir = op.join(project_dir, 'glm_HWW')
+    self_paths = glob.glob(op.join(self_dir, 'sub*'))
+    other_paths = glob.glob(op.join(other_dir, 'sub*'))
+
+    for zval in zvalue:
+        print('Smoothing: %s, zvalue: %f' % (sm, zval))
+        rdir = Parallel(n_jobs=5)(delayed(run_classification)(self_path, other_path, n_test, iterations, score_method,
+                                               zval) for self_path, other_path in zip(self_paths, other_paths))
+
+        # Initialize 'averager' and write results
+        averager_s = MvpAverageResults(self_dir, rdir[0], cleanup=False)
+        averager_o = MvpAverageResults(other_dir, rdir[0], cleanup=False)
+        averager_s.average()
+        averager_o.average()
+
+print('Analysis finished.')
