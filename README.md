@@ -21,7 +21,7 @@ N.B.: The folder *statistics* contain Jupyter Notebooks that document how statis
 To make the analyses from this study fully reproducible, I'm working on a Dockerfile to create a Linux environment with the appropriate software (FSL, Python packages, etc.), data (fMRI-data & metadata), and analysis-scripts (from the current repository). The image can be pulled as follows (warning: about 4 GB in size!):
 
 ```
-docker pull lukassnoek/nibase
+$ docker pull lukassnoek/nibase
 ```
 
 ^ NOT YET FUNCTIONAL!
