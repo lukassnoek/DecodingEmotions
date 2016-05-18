@@ -60,3 +60,4 @@ target/
 *.mat
 Plots*
 Voxel*
+DATA/*
