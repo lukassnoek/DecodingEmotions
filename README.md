@@ -13,3 +13,15 @@ Folder structure/contents:
 * *Stimulus_delivery*. This folder contains the Presentation (Neurobs) scripts used for stimulus presentation (Self-focused task and Other-focused task).
 
 N.B.: The folder *statistics* contain Jupyter Notebooks that document how statistics have been calculated, how plots have been constructed, and other things that accompany the submitted manuscript.
+
+***
+
+## Docker image
+
+To make the analyses from this study fully reproducible, I'm working on a Dockerfile to create a Linux environment with the appropriate software (FSL, Python packages, etc.), data (fMRI-data & metadata), and analysis-scripts (from the current repository). The image can be pulled as follows (warning: about 4 GB in size!):
+
+```
+docker pull lukassnoek/nibase
+```
+
+^ NOT YET FUNCTIONAL!
