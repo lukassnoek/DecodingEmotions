@@ -1,8 +1,9 @@
 import glob
 import os
-from scikit_bold.data2mvp.glm2mvp import Fsl2mvp
+from skbold.data2mvp import Fsl2mvp
+from skbold import roidata_path
 
-mask = '/media/lukas/data/DecodingEmotions/GrayMatter.nii.gz'
+mask = os.path.join(roidata_path, 'GrayMatter.nii.gz')
 mask_threshold = 0
 
 opt_dirs_hww = glob.glob('/media/lukas/data/DecodingEmotions/Optimization_set/glm_HWW/*/*.feat')
