@@ -24,7 +24,6 @@ warnings.filterwarnings('ignore', category=DeprecationWarning)
 """ START OF ANALYSIS """
 
 #  Definition of data-dirs
-
 def run_classification(self_path, other_path, n_test, iterations,
                        score_method, cutoff):
 
