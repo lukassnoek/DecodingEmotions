@@ -23,9 +23,9 @@ warnings.filterwarnings('ignore', category=DeprecationWarning)
 """ START OF ANALYSIS """
 
 #  Definition of data-dirs
-project_dir = '/media/lukas/data/DecodingEmotions/Validation_set'
-self_dir = op.join(project_dir, 'glm_zinnen')
-other_dir = op.join(project_dir, 'glm_HWW')
+project_dir = '/media/lukas/data/DecodingEmotions/DATA/DATA_MVPA/Optimization_set'
+self_dir = op.join(project_dir, 'glm_SELF')
+other_dir = op.join(project_dir, 'glm_OTHER')
 self_paths = glob.glob(op.join(self_dir, 'sub*'))
 other_paths = glob.glob(op.join(other_dir, 'sub*'))
 
@@ -34,7 +34,7 @@ iterations = 100000
 n_test = 4
 zvalue = 2.3
 score_method = 'voting'
-resultsdir = 'redo_main'
+resultsdir = 'Optimization_100000'
 n_cores = -1
 
 # Processing-pipeline
@@ -59,8 +59,8 @@ def run_classification(self_path, other_path, n_test, iterations,
     print('\nProcessing %s' % sub_name)
 
     # Loading
-    self_data = DataHandler(identifier='merged', shape='2D').load_separate_sub(self_path)
-    other_data = DataHandler(identifier='', shape='2D').load_separate_sub(other_path)
+    self_data = DataHandler(identifier='merged', shape='2D').load_separate_sub(self_path, remove_zeros=False)
+    other_data = DataHandler(identifier='', shape='2D').load_separate_sub(other_path, remove_zeros=False)
 
     # Set params in pipeline
     folds_self = StratifiedShuffleSplit(self_data.y, n_iter=iterations,
@@ -87,7 +87,6 @@ def run_classification(self_path, other_path, n_test, iterations,
 
         o_X_train, o_X_test = other_data.X[o_train_idx, :], other_data.X[o_test_idx]
         o_y_train, o_y_test = other_data.y[o_train_idx], other_data.y[o_test_idx]
-
         pipeline.fit(s_X_train, s_y_train)
         y_pred_s = pipeline.predict_proba(s_X_test)
         results_self.update_results(test_idx=s_test_idx, y_pred=y_pred_s, pipeline=pipeline)
@@ -103,8 +102,8 @@ Parallel(n_jobs=n_cores)(delayed(run_classification)(self_path, other_path, n_te
                                                zvalue, resultsdir) for self_path, other_path in zip(self_paths, other_paths))
 
 # Initialize 'averager' and write results
-averager_s = MvpAverageResults(self_dir, resultsdir, cleanup=False)
-averager_o = MvpAverageResults(other_dir, resultsdir, cleanup=False)
+averager_s = MvpAverageResults(op.join(self_dir, resultsdir), cleanup=False)
+averager_o = MvpAverageResults(op.join(other_dir, resultsdir), cleanup=False)
 averager_s.average()
 averager_o.average()
 
