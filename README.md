@@ -5,13 +5,14 @@ Oosterwijk, Snoek, Rotteveel, Barrett, & Scholte. (in prep). Shared states: Usin
 ***
 
 ## Dependencies
-Most of the analyses documented in the repository depend on the *scikit-learn* package (http://scikit-learn.org/) and the *skbold* package (https://github.com/lukassnoek/skbold). The latter package is being developed alongside my PhD-project and includes some tools to make the construction of machine learning pipelines easier. Since submitting the paper for the first time, much of the code in the *skbold* package has changed. Therefore, the main (original) analyses depend on and older version of *skbold*, which has been branched off under the name 'SharedStates'. To install this 'version' of the package, you can use *pip*::
-
+Most of the analyses documented in the repository depend on the *scikit-learn* package (http://scikit-learn.org/) and the *skbold* package (https://github.com/lukassnoek/skbold). The latter package is being developed alongside my PhD-project and includes some tools to make the construction of machine learning pipelines easier. Since submitting the paper for the first time, much of the code in the *skbold* package has changed. Therefore, the main (original) analyses depend on and older version of *skbold*, which has been branched off under the name 'SharedStates'. To install this 'version' of the package, you can use *pip*:
+```
 $ pip install git+https://github.com/lukassnoek/skbold.git@SharedStates
-
+```
 In response to several reviews, we have included additional analyses which depend on a more recent version of the *skbold* package, which can be installed as follows:
-
+```
 $ pip install git+https://github.com/lukassnoek/skbold.git@master
+```
 
 ## Repo structure/contents:
 * *ANALYSES*. This folder contains all scripts for the project.
