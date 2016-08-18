@@ -16,7 +16,7 @@ $ pip install git+https://github.com/lukassnoek/skbold.git@master
 
 ## Repo structure/contents:
 * *ANALYSES*. This folder contains all scripts for the project.
-* * MATERIALS_PROCEDURES_DESIGN *. This folder contains the Presentation (Neurobs) scripts used for stimulus presentation (Self-focused task and Other-focused task) and the stimulus materials.
+* *MATERIALS_PROCEDURES_DESIGN*. This folder contains the Presentation (Neurobs) scripts used for stimulus presentation (Self-focused task and Other-focused task) and the stimulus materials.
 
 ***
 
