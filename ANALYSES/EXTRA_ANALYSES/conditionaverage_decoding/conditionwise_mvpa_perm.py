@@ -7,7 +7,7 @@ from skbold.utils import MvpResultsClassification
 from skbold.transformers import MeanEuclidean, ArrayPermuter
 from sklearn.svm import SVC
 
-base_dir = '/media/lukas/data/DecodingEmotions/RESULTS/UNIVARIATE_RESULTS'
+base_dir = '/media/lukas/data/SharedStates/RESULTS/MVPA/Validation/Condition_average_mvpa'
 ### ARGUMENTS ###
 
 n_iter = 1000
@@ -23,7 +23,7 @@ pipe = Pipeline([('scaler', StandardScaler()),
 
 for i in range(n_iter):
     print('iter %i' % (i+1))
-    out_path = op.join(base_dir, 'Condition_average_mvpa', 'other',
+    out_path = op.join(base_dir, 'other',
                        'perm_%i' % (i+1))
     mvp_results = MvpResultsClassification(mvp, n_folds,
                                            out_path=out_path,

@@ -4,8 +4,8 @@ from skbold.data2mvp import MvpWithin
 from glob import glob
 from skbold import roidata_path
 
-base_dir = '/media/lukas/data/DecodingEmotions/RESULTS/UNIVARIATE_RESULTS/'
-other_dirs = sorted(glob(op.join(base_dir, 'FirstLevel_other', 'sub*', '*.feat')))
+base_dir = '/media/lukas/data/SharedStates/RESULTS/UNIVARIATE/'
+other_dirs = sorted(glob(op.join(base_dir, 'Firstlevel_OTHER', 'sub*', '*.feat')))
 
 mvp = MvpWithin(
     source=other_dirs,
@@ -21,7 +21,7 @@ mvp = MvpWithin(
 mvp.create()
 mvp.write(path=base_dir, name='mvp_other')
 
-self_dirs = sorted(glob(op.join(base_dir, 'FirstLevel_self', 'sub*', '*.feat')))
+self_dirs = sorted(glob(op.join(base_dir, 'Firstlevel_SELF', 'sub*', '*.feat')))
 
 mvp = MvpWithin(
     source=self_dirs,

@@ -3,7 +3,7 @@ from glob import glob
 from skbold.core import convert2mni
 from joblib import Parallel, delayed
 
-firstlevel_dir = '/media/lukas/data/DecodingEmotions/RESULTS/UNIVARIATE_RESULTS/'
+firstlevel_dir = '/media/lukas/data/SharedStates/RESULTS/UNIVARIATE/Firstlevel*'
 
 stat_dirs = sorted(glob(op.join(firstlevel_dir, '*', 'sub*', 'sub*.feat',
                                 'stats')))

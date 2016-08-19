@@ -1,5 +1,5 @@
 """
-Main analysis script for the Decoding Emotions study.
+Main analysis script for the SharedStates study.
 """
 
 from __future__ import print_function, division, absolute_import
@@ -23,7 +23,7 @@ warnings.filterwarnings('ignore', category=DeprecationWarning)
 """ START OF ANALYSIS """
 
 #  Definition of data-dirs
-project_dir = '/media/lukas/data/DecodingEmotions/DATA/DATA_MVPA/Optimization_set'
+project_dir = '/media/lukas/data/SharedStates/DATA/MVPA/Validation'
 self_dir = op.join(project_dir, 'glm_SELF')
 other_dir = op.join(project_dir, 'glm_OTHER')
 self_paths = glob.glob(op.join(self_dir, 'sub*'))
@@ -34,7 +34,7 @@ iterations = 100000
 n_test = 4
 zvalue = 2.3
 score_method = 'voting'
-resultsdir = 'Optimization_100000'
+resultsdir = 'Validation_100000'
 n_cores = -1
 
 # Processing-pipeline
@@ -44,10 +44,6 @@ clf = SVC(kernel='linear', probability=True)
 pipeline = Pipeline([('transformer', transformer),
                      ('scaler', scaler),
                      ('classifier', clf)])
-
-# Grid-search parameters
-# gs_params = dict(euclidean__zvalue=np.linspace(1.5, 2.3, 9))
-# pipeline = GridSearchCV(pipeline, param_grid=gs_params, n_jobs=-1)
 
 def run_classification(self_path, other_path, n_test, iterations,
                        score_method, pipeline, cutoff, resultsdir):
@@ -61,6 +57,8 @@ def run_classification(self_path, other_path, n_test, iterations,
     # Loading
     self_data = DataHandler(identifier='merged', shape='2D').load_separate_sub(self_path, remove_zeros=False)
     other_data = DataHandler(identifier='', shape='2D').load_separate_sub(other_path, remove_zeros=False)
+    print(self_data.X.shape)
+    print(other_data.X.shape)
 
     # Set params in pipeline
     folds_self = StratifiedShuffleSplit(self_data.y, n_iter=iterations,

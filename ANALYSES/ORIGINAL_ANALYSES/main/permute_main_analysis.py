@@ -1,5 +1,5 @@
 """
-Main analysis script for the Decoding Emotions study.
+Permutation of main analysis for the SharedStates study.
 """
 
 from __future__ import print_function, division, absolute_import
@@ -23,9 +23,9 @@ warnings.filterwarnings('ignore', category=DeprecationWarning)
 """ START OF ANALYSIS """
 
 #  Definition of data-dirs
-project_dir = '/media/lukas/data/DecodingEmotions/Validation_set'
-self_dir = op.join(project_dir, 'glm_zinnen')
-other_dir = op.join(project_dir, 'glm_HWW')
+project_dir = '/media/lukas/data/SharedStates/DATA/MVPA/Validation'
+self_dir = op.join(project_dir, 'glm_SELF')
+other_dir = op.join(project_dir, 'glm_OTHER')
 self_paths = glob.glob(op.join(self_dir, 'sub*'))
 other_paths = glob.glob(op.join(other_dir, 'sub*'))
 
@@ -59,8 +59,8 @@ def run_classification(self_path, other_path, n_test, iterations,
     other_dir = os.path.dirname(other_path)
 
     # Loading
-    self_data = DataHandler(identifier='merged', shape='2D').load_separate_sub(self_path)
-    other_data = DataHandler(identifier='', shape='2D').load_separate_sub(other_path)
+    self_data = DataHandler(identifier='merged', shape='2D').load_separate_sub(self_path, remove_zeros=False)
+    other_data = DataHandler(identifier='', shape='2D').load_separate_sub(other_path, remove_zeros=False)
 
     # Set params in pipeline
     folds_self = StratifiedShuffleSplit(self_data.y, n_iter=iterations,
@@ -69,8 +69,8 @@ def run_classification(self_path, other_path, n_test, iterations,
                                          test_size=n_test * self_data.n_class)
 
     # Results-object initialization
-    results_self = MvpResults(self_data, iterations, method=score_method, feature_scoring='accuracy')
-    results_other = MvpResults(other_data, iterations, method=score_method, feature_scoring='accuracy')
+    results_self = MvpResults(self_data, iterations, method=score_method, feature_scoring='coefovo')
+    results_other = MvpResults(other_data, iterations, method=score_method, feature_scoring='coefovo')
 
     # Loop over folds
     for j, folds in enumerate(zip(folds_self, folds_other)):

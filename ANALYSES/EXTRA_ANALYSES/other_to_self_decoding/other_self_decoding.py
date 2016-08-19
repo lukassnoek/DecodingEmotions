@@ -1,5 +1,6 @@
 """
-Main analysis script for the Decoding Emotions study.
+Main analysis script for the SharedStates study (other-to-self analysis)
+N.B.: uses the SharedStates branch from de skbold-package.
 """
 
 from __future__ import print_function, division, absolute_import
@@ -23,7 +24,7 @@ warnings.filterwarnings('ignore', category=DeprecationWarning)
 """ START OF ANALYSIS """
 
 #  Definition of data-dirs
-project_dir = '/media/lukas/data/DecodingEmotions/DATA/DATA_MVPA/Validation_set'
+project_dir = '/media/lukas/data/SharedStates/DATA/MVPA/Validation'
 self_dir = op.join(project_dir, 'glm_SELF')
 other_dir = op.join(project_dir, 'glm_OTHER')
 self_paths = glob.glob(op.join(self_dir, 'sub*'))
@@ -34,7 +35,7 @@ iterations = 100000
 n_test = 4
 zvalue = 2.3
 score_method = 'voting'
-resultsdir = 'Validation_hww'
+resultsdir = 'OtherWayAround'
 n_cores = -1
 
 # Processing-pipeline
