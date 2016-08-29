@@ -28,7 +28,7 @@ for i in range(n_iter):
                        'perm_%i' % (i+1))
     mvp_results = MvpResultsClassification(mvp_cross, n_folds,
                                            out_path=out_path,
-                                           feature_scoring='coef', verbose=False)
+                                           feature_scoring='fwm', verbose=False)
 
     folds = StratifiedKFold(mvp.y, n_folds=n_folds, shuffle=True)
 
@@ -40,4 +40,5 @@ for i in range(n_iter):
         mvp_results.update(range(mvp_cross.y.size), pred, pipeline=pipe)
 
     mvp_results.compute_scores()
+    print(mvp_results.confmat)
     mvp_results.write(feature_viz=True, confmat=True, to_tstat=True)

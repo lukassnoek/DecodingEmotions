@@ -11,7 +11,7 @@ base_dir = '/media/lukas/data/SharedStates/RESULTS/MVPA/Validation/Condition_ave
 ### ARGUMENTS ###
 
 n_folds = 10
-out_path = op.join(out_dir, 'self') # change 'self' to e.g. 'other' to do within other-decoding
+out_path = op.join(base_dir, 'self') # change 'self' to e.g. 'other' to do within other-decoding
 clf = SVC(kernel='linear', C=1, class_weight='balanced')
 
 mvp = joblib.load(op.join(base_dir, 'mvp_self.jl'))
@@ -21,7 +21,7 @@ pipe = Pipeline([('scaler', StandardScaler()),
                  ('svm', clf)])
 
 mvp_results = MvpResultsClassification(mvp, n_folds, out_path=out_path,
-                                       feature_scoring='coef', verbose=True)
+                                       feature_scoring='fwm', verbose=True)
 
 folds = StratifiedKFold(mvp.y, n_folds=n_folds)
 
@@ -33,5 +33,5 @@ for train_idx, test_idx in folds:
     mvp_results.update(test_idx, pred, pipeline=pipe)
 
 mvp_results.compute_scores()
-mvp_results.write()
+mvp_results.write(multiclass='ovo')
 mvp_results.save_model(pipe)

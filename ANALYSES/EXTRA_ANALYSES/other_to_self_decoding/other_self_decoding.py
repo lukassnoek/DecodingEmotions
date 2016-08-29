@@ -24,14 +24,14 @@ warnings.filterwarnings('ignore', category=DeprecationWarning)
 """ START OF ANALYSIS """
 
 #  Definition of data-dirs
-project_dir = '/media/lukas/data/SharedStates/DATA/MVPA/Validation'
+project_dir = '/home/lsnoek1/DecodingEmotions/PermutationStuff'
 self_dir = op.join(project_dir, 'glm_SELF')
 other_dir = op.join(project_dir, 'glm_OTHER')
 self_paths = glob.glob(op.join(self_dir, 'sub*'))
 other_paths = glob.glob(op.join(other_dir, 'sub*'))
 
 # Analysis parameters
-iterations = 100000
+iterations = 10
 n_test = 4
 zvalue = 2.3
 score_method = 'voting'
@@ -96,8 +96,9 @@ def run_classification(self_path, other_path, n_test, iterations,
         results_cross.update_results(test_idx=s_test_idx, y_pred=y_pred_s, pipeline=pipeline)
 
     # Compute average performance and write results (.csv)
-    results_cross.compute_score().write_results(self_dir, convert2mni=True)
-    results_other.compute_score().write_results(other_dir, convert2mni=True)
+    results_cross.compute_score().write_results(self_dir, convert2mni=False)
+    results_other.compute_score().write_results(other_dir, convert2mni=False)
+
 
 Parallel(n_jobs=n_cores)(delayed(run_classification)(self_path, other_path, n_test, iterations, score_method, pipeline,
                                                zvalue, resultsdir) for self_path, other_path in zip(self_paths, other_paths))
