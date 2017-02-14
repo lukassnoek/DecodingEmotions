@@ -62,9 +62,10 @@ target/
 *.docx
 *.mat
 Plots*
-Voxel*
 DATA*
-RESULTS/*
+RESULTS/MVPA
+RESULTS/UNIVARIATE
+
 ETHICS/*
 MATERIALS_PROCEDURES_DESIGN/Materials/STIM_Other_task/*.jpg
 MATERIALS_PROCEDURES_DESIGN/Materials/STIM_Other_task/*.JPG

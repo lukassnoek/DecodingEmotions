@@ -1,0 +1,348 @@
+	Contrast	cluster	k cluster	max cluster	x	y	z	Region	k region	max region
+0	act>int	1.0	1406	3.827601671218872	46	-58	16	R. Angular gyrus	720	3.827601671218872
+0								R. Medial temporal gyrus temporo-occipital	379	3.7630209922790527
+1								R. Lateral occipital cortex superior	244	3.569174289703369
+2								R. Supramarginal gyrus posterior	121	3.7782599925994873
+3								R. Lateral occipital cortex inferior	28	3.0471012592315674
+4										
+0		2.0	1056	4.457371234893799	-50	-54	10	L. Angular gyrus	302	4.340311527252197
+0								L. Medial temporal gyrus temporo-occipital	271	4.457371234893799
+1								L. Lateral occipital cortex inferior	263	4.109211444854736
+2								L. Lateral occipital cortex superior	239	4.307826995849609
+3								L. Supramarginal gyrus posterior	39	3.207507848739624
+4										
+0		3.0	841	4.210800647735596	26	2	44	R. Superior frontal gyrus	661	4.051111698150635
+0								R. Medial frontal gyrus	94	3.309382677078247
+1								R. Precentral gyrus	29	3.021747589111328
+2										
+0		4.0	624	3.951413631439209	-26	8	64	L. Superior frontal gyrus	426	3.951413631439209
+0								L. Medial frontal gyrus	81	3.6103687286376953
+1								L. Precentral gyrus	80	3.449366569519043
+2										
+0	int>act	1.0	1331	4.351086616516113	-56	-10	12	L. Central operculum	522	4.351086616516113
+0								L. Precentral gyrus	268	4.141843318939209
+1								L. Postcentral gyrus	188	3.956205368041992
+2								L. Insula	171	3.83974289894104
+3								L. Planum temporale	107	3.4868972301483154
+4								L. Parietal operculum	86	3.4868972301483154
+5								L. Planum polare	61	4.172370910644531
+6								L. Heschls gyrus	28	3.3790221214294434
+7										
+0		2.0	1009	4.3748297691345215	52	-2	14	R. Central operculum	392	4.3748297691345215
+0								R. Precentral gyrus	159	3.855499744415283
+1								R. Postcentral gyrus	100	3.870664119720459
+2								R. Planum polare	79	3.573827028274536
+3								R. Insula	61	3.1691462993621826
+4								R. Heschls gyrus	39	3.7260031700134277
+5								R. Planum temporale	27	2.936260461807251
+6										
+0		3.0	475	3.7881946563720703	52	-28	14	R. Parietal operculum	184	3.5929341316223145
+0								R. Planum temporale	125	3.7881946563720703
+1								R. Insula	121	3.2803237438201904
+2								R. Heschls gyrus	70	3.3210628032684326
+3								R. Central operculum	27	3.1333937644958496
+4										
+0	act>sit	1.0	4732	5.610431671142578	60	-32	36	R. Supramarginal gyrus anterior	996	5.610431671142578
+0								R. Supramarginal gyrus posterior	836	5.502252101898193
+1								R. Postcentral gyrus	554	4.858081817626953
+2								R. Parietal operculum	358	5.246791362762451
+3								R. Superior parietal lobule	296	4.748139381408691
+4								R. Posterior cingulate cortex	235	4.704641342163086
+5								R. Precentral gyrus	226	4.630209445953369
+6								R. Planum temporale	173	4.267118453979492
+7								R. Superior temporal gyrus posterior	84	3.859915256500244
+8								R. Precuneous	67	4.704641342163086
+9								R. Angular gyrus	60	3.613412380218506
+10								R. Central operculum	60	4.441961765289307
+11								L. Posterior cingulate cortex	52	4.034276008605957
+12										
+0		2.0	4609	6.052415370941162	-54	-36	26	L. Supramarginal gyrus anterior	1258	5.8890838623046875
+0								L. Postcentral gyrus	924	5.330219745635986
+1								L. Parietal operculum	441	6.052415370941162
+2								L. Superior parietallobule	419	4.571788311004639
+3								L. Supramarginal gyrus posterior	404	5.283439636230469
+4								L. Planum temporale	198	4.546304225921631
+5								L. Precuneous	145	4.507748603820801
+6								L. Central operculum	134	4.966684818267822
+7								L. Posterior cingulate cortex	129	4.517594337463379
+8								L. Precentral gyrus	76	4.517594337463379
+9										
+0		3.0	2389	5.2544331550598145	52	4	12	R. Precentral gyrus	510	5.2544331550598145
+0								R. Insula	502	4.871288776397705
+1								R. Central operculum	426	4.871288776397705
+2								R. Putamen	307	3.935533285140991
+3								R. Inferior frontal gyrus parsopercularis	292	5.117633819580078
+4								R. Planum polare	202	4.358067035675049
+5								R. Heschls gyrus	77	4.444726467132568
+6								R. Frontal operculum	47	3.4468164443969727
+7										
+0		4.0	2268	5.325655937194824	-48	6	8	L. Precentral gyrus	628	5.325655937194824
+0								L. Insula	508	4.972621917724609
+1								L. Central operculum	475	5.325655937194824
+2								L. Planum polare	259	4.972621917724609
+3								L. Inferior frontal gyrus parsopercularis	243	4.9191083908081055
+4								L. Heschls gyrus	91	4.109078407287598
+5								L. Putamen	38	3.197256326675415
+6								L. Frontal operculum	34	3.602160930633545
+7										
+0		5.0	2145	5.056331634521484	0	2	42	L. Supplementary motor area	386	4.9203619956970215
+0								L. Anterior cingulate cortex	359	5.056331634521484
+1								L. Superior frontal gyrus	342	3.8958888053894043
+2								R. Anterior cingulate cortex	296	5.056331634521484
+3								L. Precentral gyrus	282	4.384186267852783
+4								R. Supplementary motor area	232	4.919658660888672
+5								R. Superior frontal gyrus	96	3.2657763957977295
+6								L. Medial frontal gyrus	79	3.6350009441375732
+7								R. Medial frontal gyrus	31	3.154326915740967
+8								L. Paracingulate gyrus	23	4.40826940536499
+9										
+0		6.0	1837	5.39144229888916	50	42	8	R. Frontal pole	1427	5.39144229888916
+0								R. Medial frontal gyrus	134	3.8586034774780273
+1								R. Inferior frontal gyrus parstriangularis	124	4.565706729888916
+2										
+0		7.0	1468	4.941713333129883	-50	46	10	L. Frontal pole	1004	4.941713333129883
+0								L. Medial frontal gyrus	247	4.400758266448975
+1								L. Inferior frontal gyrus parstriangularis	74	4.249428749084473
+2										
+0		8.0	1239	4.870719909667969	-52	-60	0	L. Lateral occipital cortex inferior	585	4.808950901031494
+0								L. Medial temporal gyrus temporo-occipital	417	4.870719909667969
+1								L. Lateral occipital cortex superior	64	4.380588531494141
+2								L. Angular gyrus	39	4.380588531494141
+3								L. Inferior temporal gyrus temporo-occipital	35	4.000843048095703
+4										
+0		9.0	943	4.480844974517822	60	-60	2	R. Medial temporal gyrus temporo-occipital	645	4.480844974517822
+0								R. Lateral occipital cortex inferior	143	4.480844974517822
+1								R. Inferior temporal gyrus temporo-occipital	28	3.403677463531494
+2										
+0		10.0	66	3.6202280521392822	-28	26	28	L. Medial frontal gyrus	4	2.8991730213165283
+0										
+0		11.0	49	3.496675729751587	-36	-16	38	L. Postcentral gyrus	22	3.4166784286499023
+0										
+0	sit>act	1.0	13195	5.969594478607178	-2	-40	36	L. Lingual gyrus	1457	4.801220893859863
+0								L. Precuneous	1312	5.962738037109375
+1								R. Lingual gyrus	1175	4.81936502456665
+2								R. Precuneous	922	4.94396448135376
+3								L. Posterior cingulate cortex	744	5.969594478607178
+4								R. Intracalcarine cortex	742	4.81936502456665
+5								L. Occipital fusiform	709	4.347673416137695
+6								L. Lateral occipital cortex superior	660	4.135505199432373
+7								L. Intracalcarine cortex	651	4.663161277770996
+8								L. Hippocampus	607	4.37048864364624
+9								R. Posterior cingulate cortex	562	5.2137603759765625
+10								L. Temporo-occipital fusiform	540	4.541028022766113
+11								L. Occipital pole	409	4.475609302520752
+12								R. Temporo-occipital fusiform	404	4.108641147613525
+13								R. Occipital fusiform	346	4.108641147613525
+14								L. Parahippocampal gyrus posterior	307	4.695388317108154
+15								R. Parahippocampal gyrus posterior	224	4.276956081390381
+16								R. Lateral occipital cortex superior	222	3.353482246398926
+17								L. Temporal fusiform posterior	220	4.6568427085876465
+18								R. Hippocampus	209	3.57171893119812
+19								R. Temporal fusiform posterior	191	4.276956081390381
+20								L. Lateral occipital cortex inferior	190	3.8656203746795654
+21								L. Parahippocampal gyrus anterior	113	3.6914584636688232
+22								R. Lateral occipital cortex inferior	108	3.262540578842163
+23								L. Supracalcarine cortex	95	3.735126495361328
+24								L. Amygdala	75	3.4597928524017334
+25								R. Occipital pole	73	3.1694908142089844
+26								L. Cuneal cortex	50	3.73461651802063
+27								L. Thalamus	50	3.485560655593872
+28								R. Supracalcarine cortex	49	3.8239693641662598
+29								R. Cuneal cortex	36	3.7025399208068848
+30								R. Parahippocampal gyrus anterior	30	3.0273616313934326
+31										
+0		2.0	7062	6.219587326049805	-12	52	40	L. Frontal pole	1932	6.219587326049805
+0								L. Superior frontal gyrus	1223	5.532459259033203
+1								R. Frontal pole	1024	5.452587604522705
+2								L. Paracingulate gyrus	480	4.559146404266357
+3								R. Superior frontal gyrus	280	5.041215419769287
+4								L. Frontal medial cortex	254	4.711863994598389
+5								R. Frontal medial cortex	132	4.620828151702881
+6								R. Paracingulate gyrus	118	4.472830295562744
+7								L. Supplementary motor area	85	4.566391468048096
+8								R. Supplementary motor area	24	3.27873158454895
+9										
+0		3.0	6912	6.619510173797607	-58	-8	-18	L. Temporal pole	1466	6.271372318267822
+0								L. Medial temporal gyrus posterior	1111	6.179729461669922
+1								L. Superior temporal gyrus posterior	903	5.822136878967285
+2								L. Orbitofrontal cortex	822	5.293001651763916
+3								L. Medial temporal gyrus anterior	614	6.619510173797607
+4								L. Inferior frontal gyrus parstriangularis	352	5.7304606437683105
+5								L. Superior temporal gyrus anterior	244	5.938480377197266
+6								L. Inferior temporal gyrus anterior	223	4.693721294403076
+7								L. Inferior frontal gyrus parsopercularis	176	4.663196563720703
+8								L. Medial temporal gyrus temporo-occipital	110	4.2128400802612305
+9								L. Inferior temporal gyrus posterior	87	4.38939905166626
+10								L. Frontal pole	83	4.1621785163879395
+11								L. Frontal operculum	76	4.063860893249512
+12										
+0		4.0	3443	5.68629264831543	44	6	-26	R. Temporal pole	1130	5.57627010345459
+0								R. Medial temporal gyrus posterior	519	5.074089527130127
+1								R. Medial temporal gyrus anterior	513	5.126651763916016
+2								R. Superior temporal gyrus posterior	494	5.102947235107422
+3								R. Orbitofrontal cortex	419	4.935100555419922
+4								R. Superior temporal gyrus anterior	241	4.525353908538818
+5								R. Inferior temporal gyrus anterior	113	4.252967834472656
+6								R. Frontal pole	89	3.988349437713623
+7								R. Insula	24	3.7843146324157715
+8										
+0		5.0	2265	5.935318946838379	6	-58	-46	L. Lingual gyrus	0	0
+0										
+0		6.0	1754	6.246671199798584	-58	-66	36	L. Lateral occipital cortex superior	904	6.134719371795654
+0								L. Angular gyrus	562	6.122143745422363
+1								L. Supramarginal gyrus posterior	41	4.468306541442871
+2										
+0		7.0	731	4.764352798461914	-48	20	46	L. Medial frontal gyrus	512	4.764352798461914
+0								L. Precentral gyrus	22	3.252903461456299
+1										
+0	int>sit	1.0	20546	6.206063747406006	-60	-36	48	L. Supramarginal gyrus anterior	1238	6.206063747406006
+0								L. Precentral gyrus	1219	5.278937816619873
+1								L. Postcentral gyrus	1168	5.762627601623535
+2								L. Central operculum	1055	5.807281017303467
+3								R. Precentral gyrus	1003	4.792609214782715
+4								R. Supramarginal gyrus anterior	936	6.199540138244629
+5								R. Central operculum	911	5.426976680755615
+6								R. Insula	845	5.325247287750244
+7								R. Supramarginal gyrus posterior	772	5.224324703216553
+8								L. Insula	734	5.807281017303467
+9								R. Postcentral gyrus	716	5.76708459854126
+10								R. Parietal operculum	616	5.401854038238525
+11								L. Parietal operculum	583	5.8957109451293945
+12								L. Planum temporale	537	5.213891983032227
+13								R. Planum temporale	478	5.340411186218262
+14								L. Supplementary motor area	407	4.8444743156433105
+15								R. Putamen	396	4.199810028076172
+16								R. Superior parietal lobule	362	4.480920791625977
+17								L. Superior parietallobule	356	4.592566013336182
+18								R. Supplementary motor area	355	4.539539337158203
+19								L. Heschls gyrus	338	5.028803825378418
+20								L. Planum polare	323	5.581532001495361
+21								R. Planum polare	318	5.1440300941467285
+22								L. Supramarginal gyrus posterior	283	4.819808483123779
+23								L. Anterior cingulate cortex	283	4.426819801330566
+24								R. Anterior cingulate cortex	273	4.50647497177124
+25								R. Heschls gyrus	271	5.013637542724609
+26								R. Posterior cingulate cortex	239	4.237307548522949
+27								R. Inferior frontal gyrus parsopercularis	223	4.303763389587402
+28								L. Inferior frontal gyrus parsopercularis	218	4.711202144622803
+29								L. Posterior cingulate cortex	209	4.2553181648254395
+30								L. Putamen	141	3.8391406536102295
+31								R. Superior temporal gyrus posterior	127	4.195355415344238
+32								R. Frontal operculum	95	3.901484727859497
+33								R. Angular gyrus	79	4.1627702713012695
+34								R. Temporal pole	76	4.41451358795166
+35								L. Superior temporal gyrus posterior	66	4.501006603240967
+36								R. Precuneous	64	4.162126541137695
+37								L. Superior frontal gyrus	37	3.518693208694458
+38								R. Superior temporal gyrus anterior	37	4.198938369750977
+39								R. Pallidum	35	3.520416021347046
+40								L. Superior temporal gyrus anterior	34	4.699272155761719
+41								L. Temporal pole	31	4.051974296569824
+42								L. Precuneous	28	3.9915950298309326
+43								L. Frontal operculum	25	4.241270542144775
+44										
+0		2.0	1548	5.8158345222473145	48	42	6	R. Frontal pole	1158	5.8158345222473145
+0								R. Medial frontal gyrus	157	4.059496879577637
+1								R. Inferior frontal gyrus parstriangularis	75	3.900634765625
+2										
+0		3.0	1173	5.187376022338867	-40	40	10	L. Frontal pole	821	5.187376022338867
+0								L. Medial frontal gyrus	153	4.311223983764648
+1								L. Inferior frontal gyrus parstriangularis	84	4.586043834686279
+2										
+0		4.0	732	5.278594970703125	-54	-60	0	L. Lateral occipital cortex inferior	379	5.087893962860107
+0								L. Medial temporal gyrus temporo-occipital	333	5.278594970703125
+1								L. Inferior temporal gyrus temporo-occipital	44	3.9622044563293457
+2										
+0		5.0	208	4.224300861358643	-48	-40	-18	L. Inferior temporal gyrus posterior	127	4.224300861358643
+0								L. Inferior temporal gyrus temporo-occipital	64	3.858719825744629
+1										
+0		6.0	63	3.309007167816162	28	-20	34	L. Lingual gyrus	0	0
+0										
+0	sit>int	1.0	9521	6.215005397796631	-54	-6	-22	L. Lateral occipital cortex superior	1517	4.856032371520996
+0								L. Temporal pole	1429	5.933828353881836
+1								L. Medial temporal gyrus posterior	1094	5.897044658660889
+2								L. Superior temporal gyrus posterior	812	5.897044658660889
+3								L. Orbitofrontal cortex	760	5.169254302978516
+4								L. Angular gyrus	693	4.870615482330322
+5								L. Medial temporal gyrus anterior	614	6.215005397796631
+6								L. Inferior frontal gyrus parstriangularis	306	4.405243873596191
+7								L. Inferior temporal gyrus anterior	266	4.665673732757568
+8								L. Occipital pole	241	4.041453838348389
+9								L. Superior temporal gyrus anterior	208	5.886690616607666
+10								L. Inferior frontal gyrus parsopercularis	169	4.388900279998779
+11								L. Medial temporal gyrus temporo-occipital	137	3.51694917678833
+12								L. Supramarginal gyrus posterior	118	4.088837623596191
+13								L. Inferior temporal gyrus posterior	113	4.401858806610107
+14								L. Frontal operculum	89	4.087793350219727
+15								L. Frontal pole	46	3.382000684738159
+16								L. Temporal fusiform anterior	41	4.443740367889404
+17										
+0		2.0	9264	4.775302410125732	-24	-46	-12	L. Lingual gyrus	1374	4.775302410125732
+0								L. Precuneous	1217	4.496364593505859
+1								R. Lingual gyrus	1193	4.287562370300293
+2								R. Precuneous	990	4.504956245422363
+3								R. Intracalcarine cortex	730	4.504956245422363
+4								L. Intracalcarine cortex	687	4.244322299957275
+5								R. Lateral occipital cortex superior	645	4.518815994262695
+6								L. Posterior cingulate cortex	579	4.648459434509277
+7								R. Posterior cingulate cortex	460	3.91972279548645
+8								L. Temporo-occipital fusiform	439	4.775302410125732
+9								L. Occipital fusiform	321	4.173098564147949
+10								R. Temporo-occipital fusiform	287	4.266078948974609
+11								L. Parahippocampal gyrus posterior	219	4.604787349700928
+12								L. Temporal fusiform posterior	199	4.775302410125732
+13								R. Parahippocampal gyrus posterior	197	4.229548454284668
+14								R. Temporal fusiform posterior	135	4.116559982299805
+15								R. Occipital fusiform	104	3.364765167236328
+16								R. Occipital pole	96	4.096508502960205
+17								L. Occipital pole	87	3.3949296474456787
+18								R. Lateral occipital cortex inferior	84	3.5346133708953857
+19								L. Supracalcarine cortex	79	3.511801242828369
+20								L. Cuneal cortex	58	3.2509264945983887
+21								L. Lateral occipital cortex inferior	58	3.411125659942627
+22								R. Supracalcarine cortex	51	4.007021427154541
+23								R. Cuneal cortex	40	3.8922574520111084
+24										
+0		3.0	7861	5.987183570861816	-8	46	50	R. Frontal pole	1726	5.083090305328369
+0								L. Frontal pole	1692	5.987183570861816
+1								L. Superior frontal gyrus	1239	5.130825042724609
+2								R. Superior frontal gyrus	735	4.670505523681641
+3								L. Paracingulate gyrus	386	4.762146949768066
+4								L. Frontal medial cortex	257	4.681880950927734
+5								R. Frontal medial cortex	157	4.681880950927734
+6								R. Paracingulate gyrus	129	4.170967102050781
+7								L. Supplementary motor area	89	4.309732437133789
+8								R. Supplementary motor area	46	3.8036348819732666
+9										
+0		4.0	4025	5.1833577156066895	46	10	-28	R. Temporal pole	1164	5.1833577156066895
+0								R. Medial temporal gyrus posterior	567	5.170937538146973
+1								R. Medial temporal gyrus anterior	540	4.914721488952637
+2								R. Orbitofrontal cortex	514	4.900606155395508
+3								R. Superior temporal gyrus posterior	503	5.155910491943359
+4								R. Inferior temporal gyrus anterior	288	5.144454479217529
+5								R. Superior temporal gyrus anterior	224	4.99937629699707
+6								R. Inferior temporal gyrus posterior	144	4.501042366027832
+7								R. Frontal pole	64	3.3692939281463623
+8								R. Insula	48	4.4993815422058105
+9								R. Inferior frontal gyrus parstriangularis	47	3.338710069656372
+10								R. Medial temporal gyrus temporo-occipital	25	3.388234853744507
+11								R. Frontal operculum	23	3.50736665725708
+12										
+0		5.0	867	5.027862548828125	28	-84	-38	L. Lingual gyrus	0	0
+0										
+0		6.0	619	5.23744535446167	-44	6	52	L. Medial frontal gyrus	410	5.23744535446167
+0								L. Precentral gyrus	88	4.930892467498779
+1										
+0		7.0	560	4.039496898651123	50	-50	24	R. Angular gyrus	389	4.039496898651123
+0								R. Lateral occipital cortex superior	190	3.378321647644043
+1										
+0		8.0	397	4.6640625	2	-54	-46	L. Lingual gyrus	0	0
+0										
+0		9.0	381	4.390625476837158	-26	-10	-26	L. Hippocampus	297	4.390625476837158
+0								L. Parahippocampal gyrus anterior	92	3.9785349369049072
+1								L. Amygdala	44	3.905663013458252
+2										
+0		10.0	56	3.0938963890075684	52	-66	-36	L. Lingual gyrus	0	0
+0										
+0		11.0	20	3.4014720916748047	-22	-82	46	L. Lateral occipital cortex superior	19	3.4014720916748047
+0										
